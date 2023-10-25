@@ -26,6 +26,12 @@ modules:
 	#
 	depmod -a
 
+githubci:
+	#
+	#   ==================== Mao Building ====================
+	#
+	make -C $(KERN_SRC) M=$(PWD) modules
+
 info:
 	modinfo $(mao-module-name)
 
